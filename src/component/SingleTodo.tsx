@@ -13,7 +13,7 @@ type Props = {
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 };
 
-const SingleTodo: React.FC<Props> = ({index, todo, todos, setTodos }: Props) => {
+const SingleTodo: React.FC<Props> = ({index, todo, todos, setTodos }) => {
     const [edit, setEdit] = useState<boolean>(false);
     const [editTodo, setEditTodo] = useState<string>(todo.todo);
     
@@ -46,8 +46,8 @@ const SingleTodo: React.FC<Props> = ({index, todo, todos, setTodos }: Props) => 
     return (
     <Draggable draggableId={todo.id.toString()} index={index} >
 
-        {(provided) => (
-             <form className="todos__single"
+        {(provided, snapshot) => (
+             <form className={`todos__single ${snapshot.isDragging ? "drag" : "" }`}
               onSubmit={(e)=> handleEdit(e, todo.id)}
               {...provided.draggableProps}
               {...provided.dragHandleProps}

@@ -63,10 +63,10 @@
   color: white;
 }
 .todos__single {
-    display: flex;
-    border-radius: 5px;
-    padding: 20px;
-    margin-top: 15px;
+  display: flex;
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 15px;
    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
    transition: 0.2s;
 }
@@ -111,4 +111,15 @@ cursor: pointer;
 
   .remove {
     background-color: rgba(235, 103, 80);
+  }
+
+  .dragactive{
+    background-color: rgba(0, 221, 236);
+  }
+
+  .dragcomplete{
+    background-color: rgba(255, 38, 0);
+  }
+  .drag{
+    box-shadow: 0 0 20px;
   }
