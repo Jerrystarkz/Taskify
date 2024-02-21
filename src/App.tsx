@@ -47,9 +47,10 @@ const App: React.FC = () => {
 
       if(destination.droppableId === "TodosList"){
         active.splice(destination.index, 0, add)
-      } else{
-        complete.splice(source.index, 0, add);
+      } else {
+        complete.splice(destination.index, 0, add); // Corrected to destination.index
       }
+      
 
       setCompletedTodos(complete)
       setTodos(active)

@@ -11,7 +11,7 @@ interface Props {
     setCompletedTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-const TodosList: React.FC<Props> = ({
+const TodoList: React.FC<Props> = ({
     todos,
     setTodos,
     CompletedTodos,
@@ -66,4 +66,4 @@ const TodosList: React.FC<Props> = ({
     );
 }
 
-export default TodosList;
+export default TodoList;
